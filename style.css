@@ -1,0 +1,72 @@
+/* Ekleyeceğimiz yazı tipini "google fontlar kısmından import ettik. */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+body{
+    /* import ettiğimize göre yazı tipini değiştik. */
+    font-family:'Comfortaa', sans-serif;
+}
+
+.container{
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.hex-colors{
+    text-align: center;
+}
+
+.hex-colors h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+
+
+    /* changecolor: Bu, kullanılacak animasyonun adıdır. @keyframes kuralında bu adı kullanarak animasyonun ayrıntılarını belirleyebilirsiniz. */
+    /* 5s: Animasyonun bir turu tamamlaması için geçen süreyi belirtir. Bu durumda, animasyon 5 saniye sürecektir.  */
+    /* infinite: Animasyonun sürekli olarak tekrarlanmasını sağlar. Yani, bir tur tamamlandıktan sonra tekrar başlar ve sürekli devam eder. */
+    /* alternate: Animasyonun her turu sırasında ileri ve geri yönde çalışmasını sağlar. Yani, bir turda renk değişimi gerçekleştikten sonra bir sonraki turda renk değişimi geriye doğru olur.  */
+    animation: colorchange 5s infinite alternate;
+}
+
+.hex-colors h2{
+    font-size: 2rem;
+    margin-top: 15%;
+}
+
+/* hex-colors h1 için Animasyonu oluşturduk. */
+@keyframes colorchange{
+    0%{
+        color: indigo;
+    }
+    20%{
+        color: blue;
+    }
+    40%{
+        color: green;
+    }
+    60%{
+        color: yellow;
+    }
+    80%{
+        color: orange;
+    }
+    100%{
+        color: red;
+    }
+    
+}
+
+/* responsive */
+@media(max-width:480px){
+
+    .hex-colors h1{
+        font-size: 1.5rem;
+    }
+
+    .hex-colors h2{
+        font-size: 1.5rem;
+    }
+
+}
